@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!--Metadatos para el uso correcto de carácteres especiales-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Ayuda a que la página web sea responsive-->
+    <title>Ejercicio 2</title> <!--Título que se muestra en la pestaña del navegador-->
+    <link rel="stylesheet" href="css/style2.css"> <!--Vincula la hoja de estilos-->
+</head>
+<body onload="iniciar();"> <!--Ejecuta la función "iniciar"-->
+    <h1 id="titulo1">Pase de Imágenes automático</h1> <!--Título-->
+
+    <div id="cajaSlide"> <!--Contenedor para las imagenes-->
+        <img id="imgSlide" src="images/img1.jpg" title="Imagen" alt="Imagen" onclick="rotarImagenes();"> <!--Imagen que al hacer clic cambia la imagen con la función "rotarImagenes"-->
+        
+        <br/><br> <!--Inserta un salto de línea entre las imágenes y los botones-->
+
+        <form>
+            <input type="button" value="Parar" onclick="clearInterval(temporizador);"> <!--Botón para detener el paso de las imágenes-->
+            <input type="button" value="Continuar" onclick="iniciar();"> <!--Botón para continuar el paso de las imágenes-->
+        </form>
+    </div>
+    <script src="js/main2.js"></script> <!--Carga el archivo JavaScript-->
+</body>
+</html>

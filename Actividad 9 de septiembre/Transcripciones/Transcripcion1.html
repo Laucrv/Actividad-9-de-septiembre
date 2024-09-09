@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!--Metadatos para el uso correcto de carácteres especiales-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Ayuda a que la página web sea responsive-->
+    <title>Document</title> <!--Título que se muestra en la pestaña del navegador-->
+    <meta name="author" content="Raul caro Pastorino"> <!--Indica el autor de la página web-->
+
+    <script> //Se abre una sección script
+        function viajarConSuerte(){ //Define una función llamada "viajarConSurte"
+            var x = Math.random() * 10; //Math.random para generar un número aleatorio entre 0 y 10 y guardarlo en una variable llamada "x"
+            var URL; //Declara ua variable llamada "URL"
+                if(x <= 3) { //Condición que especifica que si el valor de "x" es menor o igual a 3 pasará lo siguiente
+                    x = 0; //Se reasigna el valor de "x" a 0
+                    URL = 'https://www.hotmail.com'; //La variable URL toma el valor de la dirección ingresada
+                } else if (x <= 6) { //Condición que especifica que si el valor de "x" es mayor a 3 pero menor o igual a 6 pasará lo siguiente
+                    x = 1; //Se reasigna el valor de "x" a 1
+                    URL = 'https://www.gmail.com'; //La variable URL toma el valor de la dirección ingresada
+                } else { //Si "x" no cumple las condiciones anteriores pasará lo siguiente
+                    x = 2; //Se reasigna el valor de "x" a 2
+                    URL = 'https://www.yahoo.com'; //La variable URL toma el valor de la dirección ingresada
+                }
+            location.assign(URL); //La función llamada "location.assign()" redirige a la URL seleccionada según la condición que se cumpla
+        }
+    </script> <!--Cierre de la sección script-->
+</head>
+<body>
+    <h1 id="titulo1">URL Aleatoria</h1> <!--Asigna el texto "URL Aleatoria como título principal"-->
+    <div>
+        <a href="javascript:viajarConSuerte();" title="Viajando con suerte">Pulsa aquí para probar suerte</a> <!--Enlace que ejecuta la función "viajarConSuerte"-->
+    </div>
+</body>
+</html>
